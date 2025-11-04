@@ -8,6 +8,9 @@ if [ "$#" -lt 5 ]; then
 	exit 1
 fi
 
+#Docker image name (change here
+docker_img = "pynguin-docker-img"
+
 num_runs=$1
 input_path=$2
 output_path=$3
@@ -39,7 +42,7 @@ export PYNGUIN_DANGER_AWARE="x"
 i=0
 while [ $i -lt $num_runs ]; do
 	echo "\nIteration $i\n"
-	docker run -v $(pwd)/${input_path}:/input:ro -v $(pwd)/${output_path}:/output -v $(pwd)/${package_path}:/package:ro pynguin-docker-exp --project-path /input --output-path /output --module-name ${module_name} ${params}
+	docker run -v $(pwd)/${input_path}:/input:ro -v $(pwd)/${output_path}:/output -v $(pwd)/${package_path}:/package:ro ${docker_img} --project-path /input --output-path /output --module-name ${module_name} ${params}
 
 	wait #until completion of Pynguin
 
