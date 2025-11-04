@@ -3,6 +3,8 @@
 
 ​	It is recommended that one use Linux, a Linux VM, or WSL for all Pynguin work. For the bash script, that is required to utilize it. You will also need Docker in order to use the automated Pynguin bash script.
 
+​	The `run_pynguin.sh` script in this repository is courtesy of the Pynguin team. It can be found in the Pynguin repository, linked here: https://github.com/se2p/pynguin/blob/main/pynguin-docker.sh
+
 
 
 ## Setting Up Automated Testing

@@ -9,7 +9,7 @@ if [ "$#" -lt 5 ]; then
 fi
 
 #Docker image name (change here
-docker_img = "pynguin-docker-img"
+docker_img="pynguin-docker-img"
 
 num_runs=$1
 input_path=$2
