@@ -16,8 +16,8 @@ module_name=$5
 param_file=$6
 
 #Get passed parameters
+params=""
 if [ "$#" -eq 6 ]; then
-	params=""
 	while IFS= read -r line
 	do
 		params+="$line "
